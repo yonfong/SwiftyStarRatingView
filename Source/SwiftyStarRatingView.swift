@@ -14,7 +14,7 @@ public typealias SSRVGestureHandler = (_ gesture: UIGestureRecognizer) -> Bool
 public class SwiftyStarRatingView: UIControl {
     
     public var shouldBecomeFirstResponder: Bool = false
-    public var shouldBeginGestureHandler: SSRVGestureHandler!
+    public var shouldBeginGestureHandler: SSRVGestureHandler = { gesture in return true}
     
     fileprivate var _minimumValue: CGFloat = 0
     fileprivate var _maximumValue: CGFloat = 5
